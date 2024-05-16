@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class ToothBooth {
+public class TollBooth {
 
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/e_toll_management_system", "root", "");
@@ -8,13 +8,14 @@ public class ToothBooth {
 
             System.out.println("connected");
 
-            // Retrieve toothbooths
-            try (ResultSet toothbooths = st.executeQuery("select * from toothbooths")) {
-                while (toothbooths.next()) {
-                    System.out.println("BoothID : " + toothbooths.getInt(1) +
-                            " Location :" + toothbooths.getString(2) +
-                            " Type : " + toothbooths.getInt(3) +
-                            " LaneCount : " + toothbooths.getString(4) + " BoothID:" + toothbooths.getInt(5));
+            // Retrieve tollbooths
+            try (ResultSet tollbooths = st.executeQuery("select * from tollbooths")) {
+                while (tollbooths.next()) {
+                    System.out.println("BoothID : " + tollbooths.getInt(1) +
+                            " Location :" + tollbooths.getString(2) +
+                            " Type : " + tollbooths.getInt(3) +
+                            " LaneCount : " + tollbooths.getString(4) + 
+                            " BoothID:" + tollbooths.getInt(5));
                 }
             }
 
