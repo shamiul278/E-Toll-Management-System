@@ -1,4 +1,3 @@
 First connect the Jar to your IDE. <br>
-then add the E_Toll_Management_System.sql to the xampp <br>
-then run the .java file 
-
+Add the E_Toll_Management_System.sql to the xampp <br>
+Run the e_toll_management_system.java file
